@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Online Notice Board</h1>
+    <a href="{{ url_for('create_notice') }}">Post New Notice</a>
+    <div class="notices">
+        {% for notice in notices %}
+            <div class="notice">
+                <h2>{{ notice.title }}</h2>
+                <p>{{ notice.content }}</p>
+                <small>{{ notice.date_posted.strftime('%Y-%m-%d %H:%M') }}</small>
+            </div>
+        {% else %}
+            <p>No notices yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

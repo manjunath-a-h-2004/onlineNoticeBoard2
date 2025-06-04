@@ -1,0 +1,139 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: #2980b9;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1c5980;
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #34495e;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+button {
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 14px 25px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1c5980;
+}
+
+.notices {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.notice {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  border-left: 6px solid #2980b9;
+  transition: transform 0.3s ease;
+}
+
+.notice:hover {
+  transform: translateY(-5px);
+}
+
+.notice h2 {
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.notice p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  white-space: pre-wrap; /* keep line breaks */
+}
+
+.notice small {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  button, input[type="text"], textarea {
+    font-size: 1rem;
+  }
+}
